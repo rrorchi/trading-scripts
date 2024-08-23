@@ -1,0 +1,31 @@
+{
+  "username": "rty",
+  "key1": "gf0Stn",
+  "key2": "Mpi51u",
+  "tg_token": "1709115411:AAFhWG",
+  "chat_id": "-1001",
+  "bots": [
+    {
+      "symbol": "COTIUSDT",
+      "timeframe": "1m",
+      "prec": "5",
+      "min_dig": "0",
+      "leverage": "20",
+      "qty_pos": "10",
+      "tema_fast": "5",
+      "tema_slow": "10",
+      "in_pos": "No"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "timeframe": "1m",
+      "prec": "3",
+      "min_dig": "0",
+      "leverage": "20",
+      "qty_pos": "10",
+      "tema_fast": "5",
+      "tema_slow": "10",
+      "in_pos": "No"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<html>
+	<head>
+	<style>
+		 body{background-color: #111111; font-family: courier; color: #CCCCCC; font-size:14px}
+		.center {margin: auto; text-align: center}
+		.mainf {margin-top: 7%; width: 300px; padding-top: 10px}
+
+		<!-- bordered {border: 2px solid #888888; color: #CCCCCC} -->
+		.bord {border-spacing: 20px;}
+		.long {background-color: #99CC33; width: 100px; height: 100px;}
+		.short {background-color: #CC0000; width: 100px; height: 100px;}
+		
+		.whiteonblack {background-color: #444444; color: #CCCCCC; width: 70px}
+		.popupmain {width: 50%; text-align: center; padding-top: 10px}
+
+	</style>
+	</head>
+
+<body>
+
+		<!-- процент -->
+<div class="center mainf bordered">
+	<!--<form id="profbutton">
+		Процент: <input class="whiteonblack" type="text" id="profperc" name="profperc" placeholder=/>
+		<input class="whiteonblack" type="submit" name="profbutton" value="OK"/>
+	</form>-->
+</div>
+
+		<!-- кнопки -->
+<table class="center bord bordered">
+	<td>										<!-- кнопка купить -->
+		<form class="center margined bordered" action="/make_order_long" method="post" id="longform">
+			<input class="long" type="submit" name="longorder" value=""/>
+		</form>
+	</td>
+	<td>										<!-- кнопка продать -->
+		<form class="center margined bordered" action="/make_order_short" method="post" id="shortform">
+			<input class="short" type="submit" name="shortorder" value=""/>
+		</form>
+	</td>
+
+</table>
+
+		<!-- инфа об ордере -->
+<table class="center popupmain">
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{%for message in messages%}
+				<tr><td class="bordered">
+					{{message}}
+				</td></tr>
+			{%endfor%}
+		{%endif%}
+	{%endwith%}
+</table>
+
+</body>
+</html>
